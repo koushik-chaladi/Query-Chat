@@ -1,0 +1,9 @@
+DECOMPOSITION_PROMPT = """You are a helpful assistant that decomposes the query to smaller sub tasks. get me in the format of python list of strings. Only return python list of strings and nothing else"""
+
+REPHRASE_QUERY = """You are a helpful assistant that rephrase the query to be more effective for search. Rephrase the query into {versions} versions. Get me in the format of python list of strings. Only return python list of strings and nothing else"""
+
+RAG_ANSWER_PROMPT = """You are a helpful assistant that generates an answer based on the retrieved documents. The retrieved documents are delimited by triple backticks. Use the retrieved documents to generate a comprehensive answer to the query. If the retrieved documents do not contain enough information to answer the query, use your own knowledge to fill in the gaps. Always use all available information to generate the best possible answer. The query is: {query} and the retrieved documents are: {documents}"""
+
+SUMMARIZE_CHUNKS_PROMPT = """You are a helpful assistant that summarizes the given chunks which are retrieved using similarity search into concise and informative summaries. The text is delimited by triple backticks. Summarize the text in a way that captures the main points and key information while maintaining clarity and coherence."""
+
+STANDALONE_QUERY = """You are a helpful assistant that generates a standalone query based on the conversation history and the current question. The conversation history is delimited by triple backticks. Use the conversation history to generate a standalone query that captures the essence of the current question while providing enough context for someone who has not seen the conversation history."""
